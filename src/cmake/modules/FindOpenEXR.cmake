@@ -104,7 +104,7 @@ if (OpenEXR_USE_STATIC_LIBS)
     if (WIN32)
         set (CMAKE_FIND_LIBRARY_SUFFIXES .lib .a ${CMAKE_FIND_LIBRARY_SUFFIXES})
     else ()
-        set (CMAKE_FIND_LIBRARY_SUFFIXES .a)
+        set (CMAKE_FIND_LIBRARY_SUFFIXES _s.a)
     endif ()
 endif ()
 
