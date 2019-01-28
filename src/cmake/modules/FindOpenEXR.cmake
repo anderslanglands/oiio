@@ -38,13 +38,7 @@ set (GENERIC_INCLUDE_PATHS
     $ENV{OPENEXR_ROOT_DIR}/include
     ${ILMBASE_ROOT_DIR}/include
     $ENV{ILMBASE_ROOT_DIR}/include
-    ${_ILMBASE_INCLUDEDIR}
-    ${_OPENEXR_INCLUDEDIR}
-    /usr/local/include
-    /usr/include
-    /usr/include/${CMAKE_LIBRARY_ARCHITECTURE}
-    /sw/include
-    /opt/local/include )
+    )
 
 # Find the include file locations. We call find_path twice -- first using
 # only the custom paths, then if that fails, try the default paths only.
@@ -87,15 +81,7 @@ set (GENERIC_LIBRARY_PATHS
     ${ILMBASE_ROOT_DIR}/lib
     ${OPENEXR_INCLUDE_PATH}/../lib
     ${ILMBASE_INCLUDE_PATH}/../lib
-    ${_ILMBASE_LIBDIR}
-    ${_OPENEXR_LIBDIR}
-    /usr/local/lib
-    /usr/local/lib/${CMAKE_LIBRARY_ARCHITECTURE}
-    /usr/lib
-    /usr/lib/${CMAKE_LIBRARY_ARCHITECTURE}
-    /sw/lib
-    /opt/local/lib
-    $ENV{PROGRAM_FILES}/OpenEXR/lib/static )
+    )
 
 # Handle request for static libs by altering CMAKE_FIND_LIBRARY_SUFFIXES.
 # We will restore it at the end of this file.
